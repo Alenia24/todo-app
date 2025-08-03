@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Name is required."],
       trim: true,
-      min: [3, "Name must be at least 3 characters"]
+      minlength: [3, "Name must be at least 3 characters"]
     },
     email: {
       type: String,
@@ -26,11 +26,19 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, "Password is required."],
-      min: [6, "Password must be at least 6 characters."],
+      minlength: [6, "Password must be at least 6 characters."],
     },
   },
   { timestamps: true }
 );
+
+// Hide the password when the user is returned from the database
+userSchema.set("toJSON", {
+    transform: function(doc, ret) {
+    delete ret.password;
+    return ret;
+    }
+});
 
 // Hash the password before saving
 userSchema.pre("save", async function (next) {
