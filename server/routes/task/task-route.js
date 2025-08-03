@@ -1,5 +1,5 @@
 import express from "express";
-import authenticateToken from "../../middleware/auth-middleware";
+import authenticateToken from "../../middleware/auth-middleware.js";
 const router = express.Router();
 
 // Import task controller
