@@ -1,4 +1,4 @@
-import Task from "../../models/task/task-model";
+import Task from "../../models/task/task-model.js";
 
 // Create a new task
 async function createTask(req, res) {
