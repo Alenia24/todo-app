@@ -10,6 +10,7 @@ import "./config/db.js";
 
 // Import routes
 import authRouter from "./routes/auth/auth-route.js";
+import taskRouter from "./routes/task/task-route.js";
 
 // Enable to use req.body when forms are submitted
 app.use(express.urlencoded({ extended: true }));
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 
 // Enable routes to use
 app.use("/api/auth", authRouter);
+app.use("/api/task", taskRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
