@@ -1,7 +1,8 @@
 import express from "express";
-const app = express();
 import { config } from "dotenv";
+import cors from "cors";
 config();
+const app = express();
 
 const PORT = process.env.PORT || 5000;
 
@@ -16,6 +17,8 @@ import taskRouter from "./routes/task/task-route.js";
 app.use(express.urlencoded({ extended: true }));
 // Enable to use req.body without a form, eg. from req.bin, postman, etc
 app.use(express.json());
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Welcome to todo app API.");
