@@ -66,3 +66,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+:root {
+  --primary: #7DB1FF;
+  --background: #F9FAFB;
+  --text-primary: #334E68;
+  --text-secondary: #7A869A;
+  --accent: #F3B9A1;
+}
