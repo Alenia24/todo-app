@@ -27,3 +27,115 @@
     color: white;
     border-color: var(--accent);
 }
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 90px;
+}
+
+.features-section h2 {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.feature-card {
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    color:var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.feature-icon {
+    color: var(--primary);
+    margin: 20px auto 30px;
+}
+
+.feature-card h3 {
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+}
+
+.testimonials-section {
+    text-align: center;
+    padding: 20px auto;
+    margin: 50px auto;
+}
+
+.testimonials-section h2 {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.testimonials-container {
+    gap: 2rem;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial-card {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    width: 40%;
+    gap: 30px;
+}
+
+.testimonial-card:hover {
+    transform: rotate(1.5deg);
+}
+
+.testimonial-avatar img {
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    width: 80px;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial-name {
+    color: white;
+    font-weight: bold;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: justify;
+    color: white;
+}
+
+.review-star {
+    color: #FFD700;
+    font-size: 12px;
+}
