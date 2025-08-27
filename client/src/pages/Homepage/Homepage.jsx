@@ -24,14 +24,25 @@ export default function Homepage() {
         <div className="hero">
           <h1>Stay Organized. Get Things Done.</h1>
           <p>Your smart, simple daily planner is just a click away.</p>
-          <button className='plan-btn'>Start Planning!</button>
+          <button className="plan-btn">Start Planning!</button>
         </div>
 
         <div className="features-section">
           <h2>Features</h2>
           <div className="features-container">
             <div className="feature-card">
-              <h3></h3>
+              <h5>Smart Task Management</h5>
+              <p>Create, edit, and prioritize tasks with ease.</p>
+            </div>
+
+            <div className="feature-card">
+              <h5>Reminders & Notifications</h5>
+              <p>Never miss a tasks with timely reminders.</p>
+            </div>
+
+            <div className="feature-card">
+              <h5>Priority Levels</h5>
+              <p>Sort tasks by urgency and focus on what matters most.</p>
             </div>
           </div>
         </div>
