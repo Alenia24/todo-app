@@ -22,8 +22,8 @@
 }
 
 .plan-btn {
-  background-color: transparent;
-  border: 2px solid #BFEFF7;
+  background-color: var(--accent);
+  border: 2px solid var(--accent);
   border-radius: 30px;
   padding: 8px 18px;
   font-weight: bold;

@@ -13,7 +13,7 @@ import "./Navigation.css";
 export default function Navigation() {
   const expand = "lg";
   return (
-    <Navbar expand={expand} className="bg-body-tertiary mb-3 px-5 custom-navbar">
+    <Navbar expand={expand} className="bg-body-tertiary px-5 custom-navbar">
       <Container fluid>
         <div className="d-flex w-100 align-items-center justify-content-between">
           <Navbar.Brand href="#" className="logo"> <img src={ Logo } alt="" width={40} className="logo-img" />Mintra</Navbar.Brand>
@@ -28,14 +28,14 @@ export default function Navigation() {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-              Offcanvas
+              <img src={ Logo } alt="" width={40} className="logo-img" />Mintra
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1">
               <Nav.Link href="#action1" className="mx-1">Features</Nav.Link>
               <Nav.Link href="#action2" className="mx-2">About</Nav.Link>
-              <Nav.Link href="#action2" className="plan-btn text-nowrap mx-2">Start Planning</Nav.Link>
+              <Nav.Link href="#action2" className="plan-btn text-nowrap mx-2">Start Planning!</Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
