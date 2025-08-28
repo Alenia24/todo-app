@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Navigation from '../../components/Navigation/Navigation.jsx'
+import Footer from "../../components/Footer/Footer.jsx"
 import VideoBanner from "../../assets/video-banner.mp4"
 import "./Homepage.css";
 
@@ -170,6 +171,7 @@ export default function Homepage() {
           <button className="cta-button">Start Planning</button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
