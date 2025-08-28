@@ -22,10 +22,20 @@
     color: var(--text-secondary);
 }
 
-.hero button {
+.hero button, .cta-section button {
     background-color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-weight: bold;
     color: white;
-    border-color: var(--accent);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero button:hover, .cta-section button:hover {
+  background-color: white;
+  color: var(--accent);
+  transform: translateY(2px);
 }
 
 .features-section {
@@ -139,3 +149,27 @@
     color: #FFD700;
     font-size: 12px;
 }
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto 50px;
+    padding: 80px 0;
+    background-color: var(--background);
+}
+
+.cta-section h2 {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.cta-section p {
+    color: var(--text-secondary);
+}
+
+.cta-section button {
+    margin-top: 20px;
+}
+

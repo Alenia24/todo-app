@@ -12,6 +12,7 @@ export default function Homepage() {
     <div>
       <Navigation />
       <div className="homepage-content">
+        {/* Video Banner */}
         <div>
           <video
             src={VideoBanner}
@@ -23,12 +24,14 @@ export default function Homepage() {
           ></video>
         </div>
 
+        {/* Hero Section */}
         <div className="hero">
           <h1>Stay Organized. Get Things Done.</h1>
           <p>Your smart, simple daily planner is just a click away.</p>
           <button className="plan-btn">Start Planning!</button>
         </div>
 
+        {/* Features Section */}
         <div className="features-section">
           <h2>Features</h2>
           <div className="features-container">
@@ -64,6 +67,7 @@ export default function Homepage() {
           </div>
         </div>
 
+        {/* Testimonial Section */}
         <div className="testimonials-section">
           <h2>What Our Users Say</h2>
           <div className="testimonials-container">
@@ -153,23 +157,17 @@ export default function Homepage() {
                 </div>
               </div>
             </div>
-
-            {/* <div className="testimonial-card">
-              <p>
-                "I've tried dozens of to-do apps, and this one finally clicked
-                for me. It's intuitive and keeps me on track."
-              </p>
-              <span>Jamie R.</span>
-            </div>
-
-            <div className="testimonial-card">
-              <p>
-                "The reminders and priorites help me manage work and family
-                tasks without stress. Total game changer!"
-              </p>
-              <span>Priya S.</span>
-            </div> */}
           </div>
+        </div>
+
+        {/* Call To Action Section */}
+        <div className="cta-section">
+          <h2>Ready to take control of your day?</h2>
+          <p>
+            Start planning smarter with a simple, powerful to-do app made for
+            your flow.
+          </p>
+          <button className="cta-button">Start Planning</button>
         </div>
       </div>
     </div>
