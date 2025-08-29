@@ -1,0 +1,53 @@
+.footer-section {
+    background-color: var(--primary);
+    padding: 50px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.site-links, .legal-links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.site-links a, .legal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-links a:hover, .legal-links a:hover {
+    color: var(--text-secondary);
+}
+
+.site-links h6, .legal-links h6 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.copy-right {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.copy-right p {
+    margin: 0;
+}
