@@ -75,6 +75,13 @@
     background-color: var(--accent);
     color: white;
     font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-form input[type="submit"]:hover{
+  background-color: white;
+  color: var(--accent);
+  transform: translateY(2px);
 }
 
 .account {
