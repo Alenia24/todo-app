@@ -1,0 +1,82 @@
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-container a {
+    color: white;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--primary);
+}
+
+.right h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.right .welcome {
+    color: white;
+    opacity: 0.8;
+}
+
+.left img {
+    height: 100vh;
+    width: 100%;
+}
+.login-form {
+    width: 40%;
+}
+
+.login-form input[type="text"], .login-form input[type="email"], .login-form input[type="password"] {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 8px;
+    border-radius: 4px;
+    color: var(--text-primary);
+    background-color: transparent;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.login-form input:focus {
+    outline: 2px solid rgba(243, 185, 161, 0.3);
+    border: 2px solid var(--accent);
+}
+
+.login-form label {
+    color: var(--background);
+    opacity: 0.7;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.login-form input[type="submit"] {
+    display: block;
+    margin: 20px auto 5px;
+    width: 60%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--accent);
+    color: white;
+    font-weight: bold;
+}
+
+.account {
+    color: var(--text-primary);
+}
