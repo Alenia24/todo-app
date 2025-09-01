@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+.footer-section a {
+    text-decoration: none;
+    color: white;
+}
+
 .links {
     display: flex;
     justify-content: space-around;
@@ -25,11 +30,6 @@
     display: flex;
     flex-direction: column;
 
-}
-
-.site-links a, .legal-links a {
-    color: white;
-    text-decoration: none;
 }
 
 .site-links a:hover, .legal-links a:hover {

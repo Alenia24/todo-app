@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -16,7 +18,13 @@ export default function Navigation() {
     <Navbar expand={expand} className="bg-body-tertiary px-5 custom-navbar">
       <Container fluid>
         <div className="d-flex w-100 align-items-center justify-content-between">
-          <Navbar.Brand href="#" className="logo"> <img src={ Logo } alt="" width={40} className="logo-img" />Mintra</Navbar.Brand>
+          <Link>
+            <Navbar.Brand href="#" className="logo">
+              {" "}
+              <img src={Logo} alt="" width={40} className="logo-img" />
+              Mintra
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
         </div>
 
@@ -28,14 +36,21 @@ export default function Navigation() {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-              <img src={ Logo } alt="" width={40} className="logo-img" />Mintra
+              <img src={Logo} alt="" width={40} className="logo-img" />
+              Mintra
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1">
-              <Nav.Link href="#action1" className="mx-1">Features</Nav.Link>
-              <Nav.Link href="#action2" className="mx-2">About</Nav.Link>
-              <Nav.Link href="#action2" className="plan-btn text-nowrap mx-2">Start Planning!</Nav.Link>
+              <Nav.Link as={Link} className="mx-1">
+                Features
+              </Nav.Link>
+              <Nav.Link as={Link} className="mx-2">
+                About
+              </Nav.Link>
+              <Nav.Link as={Link} to="/login" className="plan-btn text-nowrap mx-2">
+                Start Planning!
+              </Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
