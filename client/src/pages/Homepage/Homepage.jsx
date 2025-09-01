@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Navigation from '../../components/Navigation/Navigation.jsx'
 import Footer from "../../components/Footer/Footer.jsx"
@@ -29,7 +30,9 @@ export default function Homepage() {
         <div className="hero">
           <h1>Stay Organized. Get Things Done.</h1>
           <p>Your smart, simple daily planner is just a click away.</p>
-          <button className="plan-btn">Start Planning!</button>
+          <Link to="/login">
+            <button className="plan-btn">Start Planning!</button>
+          </Link>
         </div>
 
         {/* Features Section */}
@@ -168,10 +171,12 @@ export default function Homepage() {
             Start planning smarter with a simple, powerful to-do app made for
             your flow.
           </p>
-          <button className="cta-button">Start Planning</button>
+          <Link to="/login">
+            <button className="cta-button">Start Planning</button>
+          </Link>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
