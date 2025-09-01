@@ -23,7 +23,7 @@ export default function LogIn() {
 
     postLogin(loginData)
       .then((res) => {
-        nav("/");
+        nav("/dashboard");
       })
       .catch((error) => {
         setError(error.response.data.message);
