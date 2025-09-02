@@ -24,3 +24,17 @@ export const postLogin = async (loginData) => {
 // export const postLogout = async (logoutData) => {
 //     const URL = `${baseUrl}/auth/logout`;
 // }
+
+// Get User info 
+export const getName = async () => {
+  const token = localStorage.getItem("token");
+  if(!token) {
+    throw new Error("No token fornd.");
+  }
+
+  const response = await axios.get(`${baseUrl}/api/auth/user`, {
+    headers: {Authorization: `Bearer ${token}`},
+  })
+  return response.data.name;
+};
+

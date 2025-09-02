@@ -1,0 +1,18 @@
+.timeline-header {
+    background-color: var(--primary);
+}
+
+.dropdown-menu {
+    max-width: 250px;
+    overflow-wrap: break-word;
+    white-space: normal;
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(2%) !important;
+    border-radius: 4px;
+    
+}
+
+.dropdown-menu a {
+    color: var(--text-primary);
+}

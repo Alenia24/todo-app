@@ -1,22 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo.png";
 
-import "./Navigation.css";
+import { getName } from "../../services/todo-api.jsx";
 
-export default function Navigation() {
+import "./TimelineHeader.css";
+
+export default function TimelineHeader() {
   const expand = "lg";
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    async function fetchName() {
+      try {
+        const name = await getName();
+        setUsername(name);
+      } catch (error) {
+        console.error("Failed to fetch user name", error);
+      }
+    }
+    fetchName();
+  }, []);
+
   return (
-    <Navbar expand={expand} className="bg-body-tertiary px-5 custom-navbar">
+    <Navbar
+      key={expand}
+      expand={expand}
+      className="bg-body-tertiary px-5 custom-navbar"
+    >
       <Container fluid>
         <div className="d-flex w-100 align-items-center justify-content-between">
             <Navbar.Brand href="#" className="logo">
-              {" "}
               <img src={Logo} alt="" width={40} className="logo-img" />
               Mintra
             </Navbar.Brand>
@@ -37,15 +58,18 @@ export default function Navigation() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1">
-              <Nav.Link as={Link} className="mx-1">
-                Features
-              </Nav.Link>
-              <Nav.Link as={Link} className="mx-2">
-                About
-              </Nav.Link>
-              <Nav.Link as={Link} to="/login" className="plan-btn text-nowrap mx-2">
-                Start Planning!
-              </Nav.Link>
+              <Nav.Link href="#action1">Home</Nav.Link>
+              <NavDropdown
+                title={`Hi ${username.charAt(0).toUpperCase()+ username.slice(1)}`}
+                align="start"
+                id={`offcanvasNavbarDropdown-expand-${expand}`}
+              >
+                <NavDropdown.Item href="#action3">
+                  Edit Profile
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">Logout</NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
