@@ -20,9 +20,24 @@ export const postLogin = async (loginData) => {
     return response;    
 }
 
+// Post a logout
+export const postLogout = async () => {
+  const token = localStorage.getItem("token");
+  if (!token) throw new Error("No token found");
+
+  const URL = `${baseUrl}/api/auth/logout`; // your backend logout endpoint
+  const response = await axios.post(
+    URL,
+    {},
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
+  return response.data;
+};
+
 // // Post a logout
-// export const postLogout = async (logoutData) => {
-//     const URL = `${baseUrl}/auth/logout`;
+// export const postLogout = async () => {
+//     localStorage.removeItem("token");
+//     window.location.href = "/"
 // }
 
 // Get User info 

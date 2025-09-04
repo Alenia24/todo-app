@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -9,13 +10,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Logo from "../../assets/logo.png";
 
-import { getName } from "../../services/todo-api.jsx";
+import { getName, postLogout } from "../../services/todo-api.jsx";
 
 import "./TimelineHeader.css";
 
 export default function TimelineHeader() {
   const expand = "lg";
   const [username, setUsername] = useState("");
+  const nav = useNavigate()
 
   useEffect(() => {
     async function fetchName() {
@@ -28,6 +30,16 @@ export default function TimelineHeader() {
     }
     fetchName();
   }, []);
+
+  const handleLogout = async () => {
+    try {
+        await postLogout();
+        localStorage.removeItem("token");
+        nav("/login")
+    } catch (error) {
+        console.log("Logout failed:", error);
+    }
+  }
 
   return (
     <Navbar
@@ -68,7 +80,7 @@ export default function TimelineHeader() {
                   Edit Profile
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Logout</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Offcanvas.Body>

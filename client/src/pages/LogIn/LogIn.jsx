@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import LoginImage from "../../assets/login.png";
 import "./LogIn.css";
-import { postLogin } from "../../services/todo-api";
+import { postLogin } from "../../services/todo-api.jsx";
 
 export default function LogIn() {
   const [error, setError] = useState(null);
@@ -23,6 +23,7 @@ export default function LogIn() {
 
     postLogin(loginData)
       .then((res) => {
+        localStorage.setItem("token", res.data.token);
         nav("/dashboard");
       })
       .catch((error) => {
