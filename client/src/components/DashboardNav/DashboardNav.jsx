@@ -12,9 +12,9 @@ import Logo from "../../assets/logo.png";
 
 import { getName, postLogout } from "../../services/todo-api.jsx";
 
-import "./TimelineHeader.css";
+import "./DashboardNav.css";
 
-export default function TimelineHeader() {
+export default function DashboardNav() {
   const expand = "lg";
   const [username, setUsername] = useState("");
   const nav = useNavigate()

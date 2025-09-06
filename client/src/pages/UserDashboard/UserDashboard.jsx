@@ -1,7 +1,7 @@
 import React from 'react'
 
 import "./UserDashboard.css"
-import TimelineHeader from '../../components/TimelineHeader/TimelineHeader'
+import DashboardNav from '../../components/DashboardNav/dashboardNav'
 
 export default function UserDashboard() {
   return (
